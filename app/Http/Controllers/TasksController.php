@@ -5,24 +5,34 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Repositories\TaskRepository;
 use App\Task;
+use App\User;
+use App\Instagram\InstagramCaller;
 
 class TasksController extends Controller
 {
     public function index()
     {
-        // return Task::where('status', false).get();
-        return Task::all();
+        //return Task::all();
+
+        $user = User::first();
         
+        $ic = new InstagramCaller($user->instagramUsers()->first()->token);
+        return $ic->self();
+
     }
 
     public function create()
     {
-        //
+        // php
     }
 
     public function store(Request $request)
     {
-        return $request->all;
+        $request->validate([
+        'name' => 'required|max:12'
+        ]);
+        $article = Task::create($request->all());
+        return response()->json($article, 201);
     }
 
     public function show($id)
@@ -34,6 +44,13 @@ class TasksController extends Controller
         //
     }
 
+    public function delete(Task $task)
+    {
+        $task->delete();
+
+        return response()->json(null, 204);
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -41,9 +58,10 @@ class TasksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Task $task)
     {
-        //
+        $task->update($request->all());            
+        return response()->json($task, 200);
     }
 
     /**

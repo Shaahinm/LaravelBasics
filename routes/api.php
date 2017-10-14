@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Routes\RouteDefinitions;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +14,18 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
-Route::get('/test', function (Request $request) {
-    return "Shaahin";
-})->middleware('auth:api');
+// Route::get('/test', function (Request $request) {
+//     return "Shaahin";
+// })->middleware('auth:api');
 
-Route::apiResource('tasks', 'TasksController');
+// Route::apiResource('tasks', 'TasksController');
+
+Route::get('tasks', 'TasksController@index');
+ Route::get('tasks/{task}', 'TasksController@show');
+ Route::post('tasks', 'TasksController@store');
+ Route::put('tasks/{task}', 'TasksController@update');
+ Route::delete('tasks/{task}', 'TasksController@delete');
