@@ -29,7 +29,7 @@ class InstagramCaller
     }
     protected function get($path){
         $client = new Client();
-        return $client->request('GET', ."?"."access_token=".$this->token);
+        return $client->request('GET', $path);
     }
 
 
