@@ -19,7 +19,7 @@ class TasksController extends Controller
         //$ic = new InstagramCaller($user->instagramUsers()->first()->token);
         //return $ic->self();
 
-        return "...ok";
+        return view();
     }
 
     public function create()
