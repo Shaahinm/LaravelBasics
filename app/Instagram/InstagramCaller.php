@@ -3,6 +3,7 @@
 namespace App\Instagram;
 
 use App\Instagram\Config;
+use App\Instagram\Model\InstagramUser;
 use GuzzleHttp\Client;
 
 
@@ -32,11 +33,16 @@ class InstagramCaller
         return $client->request('GET', $path);
     }
 
+    protected function convertBodyToJson($data){
+        return \GuzzleHttp\json_decode($data->getBody(), true);
+    }
 
     public function self()
     {
         $url = $this->attachToken($this->url("self"), true);
-        return $this-> get($url);
+        $instagramUser = new InstagramUser();
+        $instagramUser->initByJsonData($this->convertBodyToJson($this->get($url))["data"]);
+        return $instagramUser;
     }
     public function mediaById($mediaId){
         $url = $this->attachToken($this->url("media_id".$mediaId), true);
