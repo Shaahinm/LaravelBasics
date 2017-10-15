@@ -6,6 +6,7 @@ use App\Instagram\Config;
 use GuzzleHttp\Client;
 
 
+
 class InstagramCaller
 {
     protected $token;
@@ -16,10 +17,13 @@ class InstagramCaller
         $this->token = $token;
     }
 
+    protected function client($path){
+        $client = new Client();
+        return $client->request('GET', Config::getValueByKey($path)."?"."access_token=".$this->token);
+    }
+
     public function self()
     {
-        $client = new Client();
-        $res = $client->request('GET', Config::getValueByKey("self")."?"."access_token=".$this->token);
-        return $res;
+        return $this-> client("self");
     }
 }

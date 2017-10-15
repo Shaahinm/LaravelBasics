@@ -14,11 +14,12 @@ class TasksController extends Controller
     {
         //return Task::all();
 
-        $user = User::first();
+        //$user = User::first();
         
-        $ic = new InstagramCaller($user->instagramUsers()->first()->token);
-        return $ic->self();
+        //$ic = new InstagramCaller($user->instagramUsers()->first()->token);
+        //return $ic->self();
 
+        return "...ok";
     }
 
     public function create()

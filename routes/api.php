@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Http\Request;
-use Routes\RouteDefinitions;
+use Illuminate\Support\Facades\Route;
 
+use App\Routing\RouteDefinition;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -23,9 +24,4 @@ use Routes\RouteDefinitions;
 // })->middleware('auth:api');
 
 // Route::apiResource('tasks', 'TasksController');
-
-Route::get('tasks', 'TasksController@index');
- Route::get('tasks/{task}', 'TasksController@show');
- Route::post('tasks', 'TasksController@store');
- Route::put('tasks/{task}', 'TasksController@update');
- Route::delete('tasks/{task}', 'TasksController@delete');
+RouteDefinition::register('Route');
