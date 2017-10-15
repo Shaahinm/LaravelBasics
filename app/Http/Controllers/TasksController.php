@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Repositories\TaskRepository;
+use Illuminate\Support\Facades\Route;
 use App\Task;
-use App\User;
-use App\Instagram\InstagramCaller;
+
 
 class TasksController extends Controller
 {
+
+    public static function registerRoutes(){
+        Route::get('tasks', 'TasksController@index');
+    }
+
     public function index()
     {
         //return Task::all();
@@ -19,7 +23,7 @@ class TasksController extends Controller
         //$ic = new InstagramCaller($user->instagramUsers()->first()->token);
         //return $ic->self();
 
-        return view();
+        return view('pages.tasks', ['title' => 'Shaahin']);
     }
 
     public function create()
