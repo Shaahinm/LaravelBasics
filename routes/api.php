@@ -24,4 +24,7 @@ use App\Routing\RouteDefinition;
 // })->middleware('auth:api');
 
 // Route::apiResource('tasks', 'TasksController');
-RouteDefinition::register('Route');
+App\Http\Controllers\TasksController::registerRoutes();
+App\Http\Controllers\UserController::registerRoutes();
+App\Http\Controllers\InstagramMediaController::registerRoutes();
+

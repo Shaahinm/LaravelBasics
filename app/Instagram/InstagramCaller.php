@@ -3,7 +3,7 @@
 namespace App\Instagram;
 
 use App\Instagram\Config;
-use App\Instagram\Model\InstagramUser;
+use App\Instagram\Model\InstagramUserModel;
 use GuzzleHttp\Client;
 
 
@@ -40,7 +40,7 @@ class InstagramCaller
     public function self()
     {
         $url = $this->attachToken($this->url("self"), true);
-        $instagramUser = new InstagramUser();
+        $instagramUser = new InstagramUserModel();
         $instagramUser->initByJsonData($this->convertBodyToJson($this->get($url))["data"]);
         return $instagramUser;
     }

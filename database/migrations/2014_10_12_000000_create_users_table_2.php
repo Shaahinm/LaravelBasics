@@ -31,7 +31,8 @@ class CreateUsersTable2 extends Migration
                 $table->string('email')->unique();
                 $table->string('password');
                 $table->rememberToken();
-                $table->timestamps();                
+                $table->timestamps();
+                $table->foreign('user_id')->references('id')->on('users');
             });
             $this->modify();
         } else {
