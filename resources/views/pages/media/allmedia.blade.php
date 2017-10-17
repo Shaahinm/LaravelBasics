@@ -9,7 +9,7 @@
     <div class="header-secondary row gray-bg">
         <div class="col-lg-12">
             <div class="page-heading clearfix">
-                <h1 class="page-title pull-left">پست ها</h1><button class="btn btn-primary btn-sm btn-add">پست جدید</button>
+                <h1 class="page-title pull-left">پست ها</h1><a href="{{route('newMedia')}}" class="btn btn-primary btn-sm btn-add">پست جدید</a>
             </div>
             <!-- Breadcrumb -->
             <ol class="breadcrumb breadcrumb-2">
