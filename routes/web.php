@@ -1,6 +1,7 @@
 <?php
 
 App\Http\Controllers\TasksController::registerRoutes();
+App\Http\Controllers\MediaController::registerRoutes();
 
 
 //Route::prefix('authentication')->group(function() {
@@ -24,4 +25,4 @@ App\Http\Controllers\TasksController::registerRoutes();
 
 Auth::routes();
 
-Route::get('/home', 'TasksController@index')->name('home');
+//Route::get('/', ['as' => 'home', 'uses' => 'mediaController@index']);

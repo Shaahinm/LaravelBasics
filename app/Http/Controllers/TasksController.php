@@ -20,13 +20,13 @@ class TasksController extends Controller
     {
         //return Task::all();
 
-        $user = User::first();
+        /*$user = User::first();
 
         
         $ic = new InstagramCaller($user->instagramUsers()->first()->token);
-        return $ic->self()->profilePicture;
+        return $ic->self()->profile_picture;*/
 
-        /*return view('pages.tasks', ['title' => 'Shaahin']);*/
+        return view('pages.tasks', ['title' => 'Shaahin']);
 
 
     }

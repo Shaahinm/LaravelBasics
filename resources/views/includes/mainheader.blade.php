@@ -4,7 +4,7 @@
     <ul class="user-info pull-left">
         <li class="profile-info dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#"
                                              aria-expanded="false"> <img width="44" class="img-circle avatar" alt=""
-                                                                         src="images/man-3.jpg">John Henderson <span
+                                                                         src="/images/man-3.jpg">John Henderson <span
                         class="caret"></span></a>
 
             <!-- User action menu -->
@@ -80,7 +80,7 @@
                         <ul class="media-list">
                             <li class="media">
                                 <div class="media-left"><img alt="" class="img-circle img-sm"
-                                                             src="images/domnic-brown.png"></div>
+                                                             src="/images/domnic-brown.png"></div>
                                 <div class="media-body">
                                     <a class="media-heading" href="#">
                                         <span class="text-semibold">Domnic Brown</span>
@@ -91,7 +91,7 @@
                             </li>
                             <li class="media">
                                 <div class="media-left"><img alt="" class="img-circle img-sm"
-                                                             src="images/john-smith.png"></div>
+                                                             src="/images/john-smith.png"></div>
                                 <div class="media-body">
                                     <a class="media-heading" href="#">
                                         <span class="text-semibold">John Smith</span>
@@ -102,7 +102,7 @@
                             </li>
                             <li class="media">
                                 <div class="media-left"><img alt="" class="img-circle img-sm"
-                                                             src="images/stella-johnson.png"></div>
+                                                             src="/images/stella-johnson.png"></div>
                                 <div class="media-body">
                                     <a class="media-heading" href="#">
                                         <span class="text-semibold">Stella Johnson</span>
@@ -113,7 +113,7 @@
                             </li>
                             <li class="media">
                                 <div class="media-left"><img alt="" class="img-circle img-sm"
-                                                             src="images/alex-dolgove.png"></div>
+                                                             src="/images/alex-dolgove.png"></div>
                                 <div class="media-body">
                                     <a class="media-heading" href="#">
                                         <span class="text-semibold">Alex Dolgove</span>
@@ -124,7 +124,7 @@
                             </li>
                             <li class="media">
                                 <div class="media-left"><img alt="" class="img-circle img-sm"
-                                                             src="images/domnic-brown.png"></div>
+                                                             src="/images/domnic-brown.png"></div>
                                 <div class="media-body">
                                     <a class="media-heading" href="#">
                                         <span class="text-semibold">Domnic Brown</span>

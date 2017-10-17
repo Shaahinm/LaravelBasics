@@ -1,12 +1,14 @@
-<script src="js/jquery.min.js"></script>
-<script src="js/perfect-scrollbar.jquery.min.js"></script>
-<script src="js/main.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/perfect-scrollbar.jquery.min.js"></script>
+<script src="/js/main.js"></script>
 
-{{--<script src="js/jquery.min.js"></script>--}}
-{{--<script src="js/bootstrap.min.js"></script>
-<script src="js/plugins/metismenu/jquery.metisMenu.js"></script>
 
-<script src="js/functions.js"></script>--}}
+
+@yield('scripts')
+
+<!-- <script src="/js/plugins/metismenu/jquery.metisMenu.js"></script> -->
+
+<!-- <script src="/js/functions.js"></script>-- -->
 <script>
     $(document).ready(function () {
         var $Window = $(window), $Container = $('div.page-container');
@@ -34,3 +36,4 @@
         }).trigger('resize');
     });
 </script>
+
