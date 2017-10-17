@@ -36,6 +36,34 @@
                 </div>
             </div>
         </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel minimal panel-info">
+                <div class="panel-heading clearfix">
+                    <div class="panel-title">تعداد کامنت های آخرین پست</div>
+                </div>
+                <!-- panel body -->
+                <div class="panel-body">
+                    <div class="stack-order">
+                        <h1 class="no-margins">43</h1>
+                        <small>کامنت</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel minimal panel-info">
+                <div class="panel-heading clearfix">
+                    <div class="panel-title">تعداد لایک ها آخرین پست</div>
+                </div>
+                <!-- panel body -->
+                <div class="panel-body">
+                    <div class="stack-order">
+                        <h1 class="no-margins">349</h1>
+                        <small>لایک</small>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-12 col-lg-10 col-lg-offset-1">
