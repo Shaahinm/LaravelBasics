@@ -2,6 +2,7 @@
 
 App\Http\Controllers\TasksController::registerRoutes();
 App\Http\Controllers\MediaController::registerRoutes();
+App\Http\Controllers\statisticsController::registerRoutes();
 
 
 //Route::prefix('authentication')->group(function() {
